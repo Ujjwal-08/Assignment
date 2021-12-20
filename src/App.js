@@ -19,7 +19,7 @@ function App() {
   const handleSubmit = (e) => {
     // e.preventDefault()
    
-    fetch('http://localhost:8000/templates/', {
+    fetch('https://my-json-server.typicode.com/Ujjwal-08/db/templates', {
         method: 'POST',
         headers: {"Content-type": "application/json"},
         body: JSON.stringify({
@@ -31,7 +31,7 @@ function App() {
   }
   
   useEffect(() => {
-    fetch('http://localhost:8000/templates')
+    fetch('https://my-json-server.typicode.com/Ujjwal-08/db/templates')
         .then(res => res.json())
         .then(data => setTemplates(data))
     
